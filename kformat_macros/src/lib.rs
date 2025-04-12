@@ -475,14 +475,14 @@ pub fn kwrite_to_raw(input: TokenStream) -> TokenStream {
                         let value = args.get(count_placeholders).unwrap();
                         count_placeholders += 1;
                         quote! {
-                            __result += (write_single!(#value, #trait_format, #format_fn, *__writer, #trait_writeable, #hint_pretty, #hint_radix, #hint_width, #hint_precision, #hint_case))?;
+                            __result += (write_single!((#value), #trait_format, #format_fn, *__writer, #trait_writeable, #hint_pretty, #hint_radix, #hint_width, #hint_precision, #hint_case))?;
                         }
                     }
                     FormatMethod::Debug => {
                         let value = args.get(count_placeholders).unwrap();
                         count_placeholders += 1;
                         quote! {
-                            __result += (write_single!(#value, #trait_debug, #debug_fn, *__writer, #trait_writeable, #hint_pretty, #hint_radix, #hint_width, #hint_precision, #hint_case))?;
+                            __result += (write_single!((#value), #trait_debug, #debug_fn, *__writer, #trait_writeable, #hint_pretty, #hint_radix, #hint_width, #hint_precision, #hint_case))?;
                         }
                     }
                 }
