@@ -1,0 +1,7 @@
+[package]
+name = "kformat_example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+kformat_macros = { path = "../kformat_macros" }
