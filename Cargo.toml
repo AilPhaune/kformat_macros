@@ -1,2 +1,2 @@
 [workspace]
-members = ["kformat_macros", "kformat_example"]
+members = ["kformat_macros", "kformat_example", "kformat_default_nostd"]

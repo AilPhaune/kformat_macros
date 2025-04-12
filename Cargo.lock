@@ -3,6 +3,13 @@
 version = 4
 
 [[package]]
+name = "kformat_default_nostd"
+version = "0.1.0"
+dependencies = [
+ "kformat_macros",
+]
+
+[[package]]
 name = "kformat_example"
 version = "0.1.0"
 dependencies = [
@@ -11,7 +18,7 @@ dependencies = [
 
 [[package]]
 name = "kformat_macros"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "proc-macro2",
  "quote",
