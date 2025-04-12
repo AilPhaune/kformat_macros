@@ -428,12 +428,6 @@ pub fn kwrite_to_raw(input: TokenStream) -> TokenStream {
         .into();
     }
 
-    println!(
-        "Found {} placeholders: {:?}",
-        placeholders.len(),
-        placeholders
-    );
-
     let mut combined = proc_macro2::TokenStream::new();
     let mut count_placeholders = 0;
 
@@ -508,8 +502,6 @@ pub fn kwrite_to_raw(input: TokenStream) -> TokenStream {
             __closure(&mut #writer)
         }
     };
-
-    println!("{}", result);
 
     TokenStream::from(result)
 }
